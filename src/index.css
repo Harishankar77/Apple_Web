@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+body {
+  background-color: rgb(241, 235, 227);
+}
+
+@keyframes marqueeLr {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marqueeRl {
+  0% {
+    transform: translateX(-50%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-marquee-lr,
+.animate-marquee-rl {
+  display: flex;
+  gap: 16px;
+  width: max-content;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.animate-marquee-lr {
+  animation-name: marqueeLr;
+  animation-duration: 16s;
+}
+
+.animate-marquee-rl {
+  animation-name: marqueeRl;
+  animation-duration: 16s;
+}
+
+.animate-marquee-lr:hover,
+.animate-marquee-rl:hover {
+  /* animation-play-state: paused; */
+}
